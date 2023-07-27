@@ -1,20 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const Modal = ({ setShowModal, languages, chosenLanguage, setChosenLanguage }) => {
-    const [searchedLanguage, setSearchedLanguage] = useState("")
-    const filteredLanguages = languages.filter((language) => language.toLowerCase().startsWith(searchedLanguage.toLowerCase()))
+    const [searchedLanguage, setSearchedLanguage] = useState("");
+    // Aggiungi questa verifica per assicurarti che "languages" sia un array valido
+    const filteredLanguages = Array.isArray(languages)
+        ? languages.filter((language) =>
+            language?.toLowerCase().startsWith(searchedLanguage.toLowerCase())
+        )
+        : [];
 
     const handleChange = (event) => {
-        setSearchedLanguage(event.target.value)
-    }
+        setSearchedLanguage(event.target.value);
+    };
 
     const handleClick = (event) => {
         const selectedLanguage = event.target.textContent;
         setChosenLanguage(selectedLanguage);
         setShowModal(null);
-    }
+    };
 
-    //console.log(searchedLanguage)
     return (
         <div className='option-list'>
             <div className='search-bar'>
@@ -33,13 +37,13 @@ const Modal = ({ setShowModal, languages, chosenLanguage, setChosenLanguage }) =
             </div>
             <div className='option-container'>
                 <ul>
-                    {filteredLanguages?.map((filteredLanguage) => (
+                    {filteredLanguages.map((filteredLanguage) => (
                         <div className="list-item" key={filteredLanguage}>
                             <div className='icon'>
                                 {chosenLanguage === filteredLanguage ? "✓" : ""}
                             </div>
                             <li
-                                onClick={handleClick} 
+                                onClick={handleClick}
                                 style={{ color: chosenLanguage === filteredLanguage ? "#8ab4f8" : null }}
                             >
                                 {filteredLanguage}
@@ -48,9 +52,8 @@ const Modal = ({ setShowModal, languages, chosenLanguage, setChosenLanguage }) =
                     ))}
                 </ul>
             </div>
-
         </div>
-    )
-}
+    );
+};
 
-export default Modal
+export default Modal;
