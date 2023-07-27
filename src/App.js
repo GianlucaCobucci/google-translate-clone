@@ -10,56 +10,36 @@ function App() {
   const [inputLanguage, setInputLanguage] = useState('English')
   //console.log("inputLanguage", inputLanguage)
   const [outputLanguage, setOutputLanguage] = useState('Polish')
+  //console.log("outputLanguage", outputLanguage)
+
   const [languages, setLanguages] = useState(null)
   const [textToTranslate, setTextToTranslate] = useState("")
   const [translatedText, setTranslatedText] = useState("")
 
   const getLanguages = async () => {
-    const options = {
-      method: 'GET',
-      url: 'https://g-translate1.p.rapidapi.com/languages',
-      headers: {
-        'X-RapidAPI-Key': '5dc68bc883msh62cc6957fe2f276p12df4fjsnc3fea544def2',
-        'X-RapidAPI-Host': 'g-translate1.p.rapidapi.com'
-      }
-    };
-
-    try {
-      const response = await axios.request(options);
-      //console.log(response.data);
-      const arrayOfData = Object.keys(response.data.data).map(key => response.data.data[key])
-      setLanguages(arrayOfData)
-    } catch (error) {
-      console.error(error);
-    }
+    const response = await axios("http://localhost:8000/languages")
+    //console.log(response.data.arrayOfData)
+    setLanguages(response.data.arrayOfData)
   }
 
   const translate = async () => {
-    const options = {
-      method: 'GET',
-      url: 'https://g-translate1.p.rapidapi.com/translate',
-      params: {
-        text: textToTranslate,
-        tl: outputLanguage,
-        sl: inputLanguage
-      },
-      headers: {
-        'X-RapidAPI-Key': '5dc68bc883msh62cc6957fe2f276p12df4fjsnc3fea544def2',
-        'X-RapidAPI-Host': 'g-translate1.p.rapidapi.com'
-      }
+    const data = {
+      textToTranslate,
+      outputLanguage,
+      inputLanguage
     };
 
     try {
-      const response = await axios.request(options);
-      //console.log(response.data.data.translation);
-      setTranslatedText(response.data.data.translation)
+      const response = await axios.get("http://localhost:8000/translation", {
+        params: data,
+      });
+      //console.log(response.data.response)
+      setTranslatedText(response.data.response);
+
     } catch (error) {
       console.error(error);
     }
   }
-  //console.log("translatedText", translatedText)
-
-  //console.log("languages", languages)
 
   useEffect(() => {
     getLanguages()

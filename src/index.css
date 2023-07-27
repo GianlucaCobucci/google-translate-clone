@@ -13,17 +13,17 @@ body {
 
 .app {
     display: flex;
-    width: 652px;
-    height: 360px;
+    width: 748px;
+    height: 414px;
 }
 
 input {
     border: 1px solid #818588;
-    border-radius: 8px;
+    border-radius: 9.2px;
     box-sizing: border-box;
     color: #bdc1c6;
-    font-size: 14px;
-    height: 40px;
+    font-size: 16.1px;
+    height: 46px;
     background-color: transparent;
     width: 100%;
 }
@@ -32,7 +32,7 @@ input {
 .input {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 345px;
 }
 
 textarea {
@@ -40,13 +40,13 @@ textarea {
     color: #bdc1c6;
     border: none;
     resize: none;
-    padding: 18px;
-    height: 146px;
-    border-radius: 10px;
+    padding: 20.7px;
+    height: 168px;
+    border-radius: 11.5px;
     outline: none;
     overflow: auto;
-    font-size: 28px;
-    margin-top: 10px;
+    font-size: 32.2px;
+    margin-top: 11.5px;
 }
 
 .output textarea {
@@ -55,27 +55,26 @@ textarea {
 
 .select-drop-down input {
     color: #8ab4f8;
-    padding: 5px 15px;
-    font-size: 15px;
+    padding: 5.8px 17.3px;
+    font-size: 17.3px;
 }
 
 .select-drop-down .down-arrow svg {
     position: relative;
-    left: 265px;
-    top: -33px;
-    width: 26px;
-    height: 26px;
+    left: 305.5px;
+    top: -38.45px;
+    width: 29.9px;
+    height: 29.9px;
     fill: #8ab4f8;
 }
 
 .arrow-container {
-    padding: 10px;
-
+    padding: 11.5px;
 }
 
 .arrow-container svg {
-    width: 26px;
-    height: 26px;
+    width: 29.9px;
+    height: 29.9px;
     fill: #5a5a5d;
 }
 
@@ -87,47 +86,44 @@ textarea {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 10px;
-
+    padding: 11.5px;
 }
 
 input {
     border: 1px solid #818588;
-    border-radius: 8px;
+    border-radius: 9.2px;
     box-sizing: border-box;
     color: #bdc1c6;
-    font-size: 14px;
-    height: 40px;
+    font-size: 16.1px;
+    height: 46px;
     background-color: transparent;
-    width: 100%;
-
-}
-
-.search-bar input {
-    background: url(https://www.gstatic.com/images/icons/material/system/2x/search_grey600_24dp.png) right 8px center no-repeat;
-    background-size: 24px 24px;
-    padding-left: 16px;
-    padding-right: 40px;
-    width: 90% !important;
+    width: 90%;
     outline: none;
 }
 
+.search-bar input {
+    background: url(https://www.gstatic.com/images/icons/material/system/2x/search_grey600_24dp.png) right 9.2px center no-repeat;
+    background-size: 27.3px 27.3px;
+    padding-left: 18.4px;
+    padding-right: 45.5px;
+}
+
 .search-bar .close-button svg {
-    width: 30px;
-    height: 30px;
-    padding: 6px;
+    width: 34.5px;
+    height: 34.5px;
+    padding: 6.9px;
     fill: #5a5a5d;
 }
 
 .option-container {
-    height: 250px;
+    height: 287.5px;
     overflow: auto;
 }
 
 .option-list ul {
-    margin: 15px;
+    margin: 17.3px;
     padding: 0;
-    height: 1300px;
+    height: 1495px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -136,66 +132,65 @@ input {
 
 .option-list li {
     color: #bdc1c6;
-    font-size: 14px;
-    padding: 8px;
+    font-size: 16.1px;
+    padding: 10.3px;
     list-style-type: none;
-    border-radius: 4px;
+    border-radius: 5.8px;
 }
 
 .option-list li:hover {
     background-color: #5a5a5d;
 }
 
-
 .list-item {
     display: flex;
 }
 
 .list-item .icon {
-    padding: 8px;
-    width: 11px;
+    padding: 10.3px;
+    width: 12.65px;
     color: #8ab4f8;
 }
 
 .button-container {
     color: #bdc1c6;
-    padding: 18px;
-    height: 20px;
+    padding: 20.7px;
+    height: 46px;
 }
 
 .select-drop-down input {
     color: #8ab4f8;
-    padding: 5px 15px;
-    font-size: 15px;
+    padding: 6.9px 20.7px;
+    font-size: 17.3px;
 }
 
 .select-drop-down .down-arrow svg {
     position: relative;
-    left: 265px;
-    top: -33px;
-    width: 26px;
-    height: 26px;
+    left: 305.5px;
+    top: -38.45px;
+    width: 29.9px;
+    height: 29.9px;
     fill: #8ab4f8;
 }
 
 .input .delete {
     position: relative;
-    left: 265px;
-    top: -156px;
-    font-size: 50px;
+    left: 305.5px;
+    top: -179.55px;
+    font-size: 57.75px;
     color: #bdc1c6;
 }
 
 .button-container {
     color: #bdc1c6;
-    padding: 11px;
-    height: 40px;
+    padding: 14.45px;
+    height: 46px;
 }
 
 .input .delete {
     position: relative;
-    left: 265px;
-    top: -162px;
-    font-size: 50px;
+    left: 305.5px;
+    top: -179.55px;
+    font-size: 57.75px;
     color: #bdc1c6;
 }
